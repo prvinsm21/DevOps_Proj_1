@@ -6,11 +6,11 @@ RUN yum install -y httpd \
     zip \
     unzip
 #COPY  coffee_shop.zip /var/www/html/
-ADD  https://www.free-css.com/assets/files/free-css-templates/download/page278/ollie.zip /var/www/html/
+ADD  https://www.free-css.com/assets/files/free-css-templates/download/page276/adward.zip /var/www/html/
 WORKDIR /var/www/html/
 
-RUN unzip ollie.zip
-RUN cp -rf ollie/* .
-RUN rm -rf ollie/ ollie.zip
+RUN unzip adward.zip
+RUN cp -rf adward/* .
+RUN rm -rf adward/ adward.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
